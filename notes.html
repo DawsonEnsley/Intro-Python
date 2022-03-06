@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Python-Intro Notes</title>
+</head>
+<body>
+
+<p>
+    <h1>Python: Turtle</h1>
+    <h2>Shape: Square</h2>
+    <br>import turtle
+<br>
+    <br>lane = turtle.Turtle()
+    <br>lane.color("yellow")
+<br>
+    <br>for side in [1, 2, 3, 4]:
+    <br><blockquote>lane.forward(100)
+    <br>lane.right(90)</blockquote>
+<p>
+    <br><h1>Python: Turtle</h1>
+    <h2>Shape: Star</h2>
+    <br>import turtle
+<br>
+    <br>lane = turtle.Turtle()
+    <br>lane.color("green")
+<br>
+    <br>for side in [1, 2, 3, 4, 5]:
+    <br><blockquote>lane.forward(100)
+    <br>lane.right(144)</blockquote>
+<p>
+    <br><h1>Python: Turtle</h1>
+    <h2>Shape: Spiral</h2>
+    <br>import turtle
+    <br>lengths = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
+    <br>
+    <br>dizzy = turtle.Turtle()
+    <br>dizzy.color("blue")
+    <br>dizzy.width(5)
+    <br>
+    <br>for length in lengths:
+    <br><blockquote>dizzy.forward(length)
+    <br>dizzy.right(90)</blockquote>
+<p>
+    <br><h1>Python: Turtle</h1>
+    <h2>Shape: House</h2>
+    <br>builder = turtle.Turtle()
+    <br>builder.color("red")
+    <br>builder.width(5)
+    <br>
+    <br>angles = [-90, 0, 0, -90,
+          135, 0, 0, 0,
+          90, 0, 0, 0,
+          135, -90, 0, 0,
+          90, 0, 0, 0]
+    <br>
+    <br>for angle in angles:
+    <br><blockquote>builder.right(angle)
+    <br>builder.forward(25)</blockquote>
+<p>
+    import turtle
+lane = turtle.Turtle()
+lane.hideturtle()
+rainbow = ["red", "orange", "yellow", "green", "blue", "purple"]
+sides = [1, 2, 3, 4, 5]
+lane.width(5)
+lane.speed(0)
+
+lane.penup()
+lane.forward(50)
+lane.pendown()
+
+
+for diff_color in rainbow:
+    lane.color(diff_color)
+    for stroke in sides:
+        lane.forward(50)
+        lane.right(144)
+    lane.right(60)
+    lane.penup()
+    lane.forward(50)
+    lane.pendown()
+</body>
+</html>
