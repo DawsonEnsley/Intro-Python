@@ -102,25 +102,72 @@
 #         paul.forward(10)
 #         paul.right(90)
 
+# stair = turtle.Turtle()
+#
+# stair.speed(5)
+# stair.color("green")
+# stair.width(3)
+#
+# for steps in range(15):
+#     stair.forward(10)
+#
+#     if steps % 2 == 0:
+#         stair.left(90)
+#     else:
+#         stair.right(90)
+
 import turtle
 t = turtle.Turtle()
-t.color("green")
-t.width(3)
-t.speed(5)
+s = turtle.Turtle()
 
-for side in range(22):
-    t.forward(side * 10)
-    t.right(120)
+
+def tri_spiral(length, turn, color):
+    t.color(color)
+    t.width(3)
+    t.speed(7)
+    for side in range(length):
+        t.forward(side * 10)
+        t.right(turn)
+
+
+tri_spiral(22, 120, "green")
+
 
 def spiral(sides, turn, color, width):
-    s = turtle.Turtle()
     s.color(color)
     s.width(width)
-    s.speed(5)
+    s.speed(7)
     for n in range(sides):
         s.forward(n)
         s.right(turn)
 
+
 spiral(50, 30, "gold", 3)
+
+
+def star(color, sides, length, angle, distance):
+    galileo = turtle.Turtle()
+    galileo.color(color)  # colorful!
+    galileo.width(5)  # visible!
+    galileo.speed(0)  # fast!
+    galileo.penup()
+    galileo.left(angle)  # away from center
+    galileo.forward(distance)
+    galileo.pendown()  # start drawing
+    for side in range(sides):
+        galileo.forward(length)
+        galileo.left(720 / sides)
+    galileo.hideturtle()  # just the star
+
+
+for angle in [180, 135, 90, 45, 0]:
+    star("red", 5, 60, angle, 100)
+
+for angle in [180, 135, 90, 45, 0]:
+    star("blue", 5, 30, angle, 50)
+
+for angle in [180, 135, 90, 45, 0]:
+    star("white", 5, 15, angle, 25)
+
 
 turtle.exitonclick()
