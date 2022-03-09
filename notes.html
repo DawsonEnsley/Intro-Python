@@ -6,8 +6,7 @@
 </head>
 <body>
 
-<p>
-    <h1>Python: Turtle</h1>
+<p><h1>Python: Turtle</h1>
     <h2>Shape: Square</h2>
     <br>import turtle
 <br>
@@ -17,8 +16,8 @@
     <br>for side in [1, 2, 3, 4]:
     <blockquote>lane.forward(100)
     <br>lane.right(90)</blockquote>
-<p>
-    <br><h1>Python: Turtle</h1>
+
+<p><br><h1>Python: Turtle</h1>
     <h2>Shape: Star</h2>
     <br>import turtle
 <br>
@@ -28,8 +27,8 @@
     <br>for side in [1, 2, 3, 4, 5]:
     <blockquote>lane.forward(100)
     <br>lane.right(144)</blockquote>
-<p>
-    <br><h1>Python: Turtle</h1>
+
+<p><br><h1>Python: Turtle</h1>
     <h2>Shape: Spiral</h2>
     <h3>Spiral Function with Parameters</h3>
     <br>import turtle
@@ -44,8 +43,8 @@
     <blockquote>dizzy.forward(n)
     <br>dizzy.right(turn)</blockquote>
     <br>spiral(#sides, #turn, #color, #width)
-<p>
-    <br><h1>Python: Turtle</h1>
+
+<p><br><h1>Python: Turtle</h1>
     <h2>Shape: House</h2>
     <br>builder = turtle.Turtle()
     <br>builder.color("red")
@@ -60,8 +59,8 @@
     <br>for angle in angles:
     <blockquote>builder.right(angle)
     <br>builder.forward(25)</blockquote>
-<p>
-    <br><h1>Python: Turtle</h1>
+
+<p><br><h1>Python: Turtle</h1>
     <h2>Shape: Rainbow Stars</h2>
     <br>import turtle
     <br>lane = turtle.Turtle()
@@ -84,8 +83,8 @@
         <br>lane.penup()
         <br>lane.forward(50)
         <br>lane.pendown()
-<p>
-    <br><h1>Python: Turtle</h1>
+
+<p><br><h1>Python: Turtle</h1>
     <h2>Shape: Circle</h2>
     <br>import turtle
     <br>sides = range(100)
@@ -97,8 +96,22 @@
     <br>for side in sides:
         <br><blockquote>t.forward(5)
         <br>t.right(360 / 100)</blockquote>
-<p>
-    <br>
+
+<p><br><h1>Python: Turtle</h1>
+    <h2>Shape w/ Modulo</h2>
+    <br>t = turtle.Turtle()
+    <br>t.width(5)
+<br>
+    <br>for n in range(12):
+            <blockquote>t.color("gray")
+    <br>if n % 3 == 0:
+            <br>t.color("red")
+    <br>if n % 3 == 1:
+            <br>t.color("orange")
+    <br>if n % 3 == 2:
+            <br>t.color("yellow")</blockquote>
+    <br>t.forward(50)
+    <br>t.right(360/12)
 
 </body>
 </html>
