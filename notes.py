@@ -5,16 +5,27 @@
 #
 #
 # word_pyramid("abracadabra")
-#  Use in interactive Terminal
-#
-#
+
+# While Loops Example 1
+# s = "Tenochtitlan"
+# index = 0
+# while index < len(s):
+#     index -= 1
+#     print(s[:index])
+
 # def word_triangle(word):
 #     length = len(word)
 #     for n in range(length):
 #         print(word[:length - n])
 #
-#
 # word_triangle("abracadabra")
+
+# While Loops Example 2
+# s = "Abracadabra"
+# index = len(s)
+# while index > 0:
+#     print(s[:index])
+#     index -= 1
 #  Use in interactive Terminal
 
 # Concatenation Example
@@ -77,3 +88,112 @@
 # print(good_length("apple"))
 #
 # print(good_length("hippopotamus"))
+
+# Operations on Lists
+# def total_length(list_of_strings):
+#     total= 0
+#     for string in list_of_strings:
+#         total =total + len(string)
+#     return total
+#
+# print(total_length(['foo', 'bar']))
+# print(total_length([]))
+# print(total_length(['balloons']))
+# print(total_length(["", '', "", '']))
+
+# import time
+# n = 10
+# while n > 0:
+#     time.sleep(1)
+#     print(n)
+#     n -= 1
+# print('Blastoff!')
+
+# Translating a for loop into a while loop example 1
+# word = "cat"
+# for index in range(len(word)):
+#     print(word[index])
+#
+# index = 0
+# word = "cat"
+# while index < len(word):
+#     print(word[index])
+#     index += 1
+
+# Translating a for loop into a while loop example 1
+# def count_character(string, target):
+#     total = 0
+#     for ch in string:
+#         if ch == target:
+#             total += 1
+#     return total
+#
+# # print(count_character("bonobo", "o"))
+#
+#
+# def character_count(string, target):
+#     index = 0
+#     total = 0
+#     while index < len(string):
+#         if string[index] == target:
+#             total += 1
+#         index += 1
+#     return total
+#
+#
+# print(character_count("bonobo", "o"))
+
+# def until_dot(a):
+#     index = 0
+#     while index < len(a) and a[index] != ".":
+#         index += 1
+#     return a[:index]
+#
+#
+# print(until_dot("Udacity.com"))
+
+
+# def is_substring(substring, string):
+#     index = 0
+#     while index < len(string):
+#         if string[index : index + len(substring)] == substring:
+#             return True
+#         index += 1
+#     return False
+
+# Count Substrings
+# def count_substring(string, target):
+#     index = 0
+#     total = 0
+#     while index < len(string):
+#         if string[index : index + len(target)] == target:
+#             total += 1
+#             index += len(target)
+#         else:
+#             index += 1
+#     return total
+#
+# print(count_substring('love, love, love, all you need is love', 'love'))
+# print(count_substring('ABBA', 'AB'))
+
+# Locate First Substring
+# def locate_first(string, sub):
+#     index = 0
+#     while index < len(string):
+#         if string[index : index + len(sub)] == sub:
+#             return index
+#         else:
+#             index += 1
+#     return -1
+
+# Locate all Substrings
+# def locate_all(string, sub):
+#     matches = []
+#     index = 0
+#     while index < len(string):
+#         if string[index : index + len(sub)] == sub:
+#             matches.append(index)
+#             index += len(sub)
+#         else:
+#             index += 1
+#     return matches
