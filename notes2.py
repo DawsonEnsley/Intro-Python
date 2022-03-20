@@ -174,5 +174,5 @@
 #     output = "".join(output)
 #     return output
 
-# To see the results, we need to call the funtion and print what it returns:
+# To see the results, we need to call the function and print what it returns:
 # print(silly_string(nouns, verbs, templates))
