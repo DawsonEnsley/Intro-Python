@@ -1,25 +1,85 @@
-# This is a sample Python script.
-
-# Press ⌃R to execute it or replace it with your code.
-# Press Double ⇧ to search everywhere for classes, files, tool windows, actions, and settings.
-
-
-def print_hi(your_name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {your_name}')  # Press ⌘F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
 
-print("Hello World!")
+# print("Hello World!")
+# name = input("What's your name?\n")
+# print(f"Welcome to Pycharm, {name}!")
+# import time
+#
+#
+# def print_greeting():
+#     your_name = input("Hello, what's your name?\n")
+#     time.sleep(1)
+#
+#
+# def answer():
+#     print(f'Hello there!')
+#     time.sleep(1)
+#
+#
+# def goodbye():
+#     print(f"It was nice to meet you, but I've gotta run. Goodbye!")
+#     time.sleep(1)
+#
+#
+# print_greeting()
+# answer()
+# goodbye()
 
-name = input("What's your name?")
-print(f"Welcome to Pycharm, {name}!")
-
+import time
+# def print_pause(print_sleep):
+#     print(print_sleep)
+#     time.sleep(2)
+#
+#
+# def valid_input(prompt, option1, option2):
+#     while True:
+#         response = input(prompt).lower()
+#         if option1 in response:
+#             break
+#         elif option2 in response:
+#             break
+#         else:
+#             print_pause("Sorry, I don't understand.")
+#     return response
+#
+#
+# def intro():
+#     print_pause("Hello! I am Bob, the Breakfast Bot.")
+#     print_pause("Today we have two breakfasts available.")
+#     print_pause("The first is waffles with strawberries and whipped cream.")
+#     print_pause("The second is sweet potato pancakes with butter and syrup.")
+#
+#
+# def take_order():
+#     response = valid_input("Please place your order. "
+#                            "Would you like waffles or pancakes?\n",
+#                            "waffles", "pancakes")
+#     if "waffles" in response:
+#         print_pause("Waffles it is!")
+#     elif "pancakes" in response:
+#         print_pause("Pancakes it is!")
+#     print_pause("Your order will be ready shortly.")
+#
+#
+# def another_order():
+#     order_again = valid_input("Would you like to place another order?\n "
+#                               "Please say 'yes' or 'no'.\n",
+#                               "yes", "no")
+#     if "no" in order_again:
+#         print_pause("Okay, Goodbye!\n")
+#     elif "yes" in order_again:
+#         print_pause("Wonderful! I'm happy to take another order.\n")
+#         take_order()
+#
+#
+# def order_breakfast():
+#     intro()
+#     take_order()
+#     another_order()
+#
+#
+# order_breakfast()
+import turtle
 #   Create Name
 # weaver = turtle.Turtle()
 #   Draw Chain or Links
