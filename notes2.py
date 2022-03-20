@@ -88,21 +88,21 @@
 #     return matches
 
 # Line breaks in a single string
-# a = """Lorem ipsum dolor sit amet,
-# consectetur adipiscing elit,
-# sed do eiusmod tempor incididunt
-# ut labore et dolore magna aliqua."""
+# a = """apples
+# oranges
+# bananas
+# grapes"""
 # print(a)
 #
 # # Line breaks with join method
 # lines = ["Haiku frogs in snow",
 #          "A limerick came from Nantucket",
-#          "Tetrametric drum-beats thrumming, Hiawathianic rhythm."]
+#          "Tetra drum-beats thrumming, Hawaii rhythm."]
 #
 # # Write your function definition here:
-# def breakify(strings):
+# def breaking(strings):
 #     return "<br>".join(strings)
-# print(breakify(lines))
+# print(breaking(lines))
 
 # # Remove method inside of a string
 # def remove_substring(string, sub):
@@ -135,7 +135,7 @@
 
 # Test Examples:
 # print(replace_substring('Hot SPAM!drop soup, and curry with SPAM!plant.', 'SPAM!', 'egg'))
-# print(replace_substring("The word 'definately' is definately often misspelled.", 'definately', 'definitely'))
+# print(replace_substring("The word 'definitely' is definitely often misspelled.", 'definitely', 'definitely'))
 
 # Exercise Example for Find and replace from detached lists
 # nouns = [list of strings here]
