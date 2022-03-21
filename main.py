@@ -25,7 +25,7 @@
 # answer()
 # goodbye()
 
-import time
+# import time
 # def print_pause(print_sleep):
 #     print(print_sleep)
 #     time.sleep(2)
