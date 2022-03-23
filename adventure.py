@@ -1,10 +1,6 @@
 import time
 import random
 items = []
-# option1 = ["1", 1, "yes", "y"]
-# option2 = ["2", 2, "no", "n"]
-beasts = ["Griffin", "Dragon", "Wyvern", "Basilisk"]
-monster = random.choice(beasts)
 
 
 def print_sleep(print_pause):
@@ -12,42 +8,47 @@ def print_sleep(print_pause):
     time.sleep(1)
 
 
-def intro(items):
+def print_deepsleep(str1, str2, str3):
+    print(str1, str2, str3)
+    time.sleep(1)
+
+
+def intro(items, monster):
     print_sleep("After a long journey through the countryside, \n"
                 "you find some shade underneath a great oak where "
                 "you take a short rest.")
     print_sleep("You awake to gather your things, and you can't help but "
                 "notice the faint scent of lilac and gooseberries.")
-    print_sleep(f"Rumor has it that a terrible {monster} is somewhere around "
-                "here, and has been terrifying the nearby village.")
+    print_deepsleep("Rumor has it that a terrible ", monster, "is somewhere"
+                    " around here, and has been terrifying the nearby village.")
     print_sleep("In front of you is an abandoned church.")
     print_sleep("To your right is a murky lake.")
     print_sleep("In your hand you wield an old rusty sword")
     items.append("rusty")
 
 
-def fight_or_flight(items):
+def fight_or_flight(items, monster):
     if "rusty" in items:
         print_sleep("You feel a bit under-prepared for this, while"
                     " only carrying a rusty sword.")
     pick = valid_inputstr("Would you like to (1) fight or (2) run away?",
                           "1", "2")
     if pick == "1":
-        fight(items)
+        fight(items, monster)
     if pick == "2":
-        flight(items)
+        flight(items, monster)
 
 
-def church(items):
+def church(items, monster):
     print_sleep("You carefully approach the church's front door.")
-    print_sleep(f"You are just about to knock when it flies open instead "
-                f"and out steps a {monster}.")
-    print_sleep(f"This church must have the {monster}'s nest inside!")
-    print_sleep(f"The {monster} takes a swipe at you!")
-    fight_or_flight(items)
+    print_deepsleep("You are just about to knock when it flies open instead "
+                    "and out steps a ", monster, ".")
+    print_deepsleep("This church must have the ", monster, "'s nest inside!")
+    print_deepsleep("The ", monster, "takes a swipe at you!")
+    fight_or_flight(items, monster)
 
 
-def lake(items):
+def lake(items, monster):
     print_sleep("You cautiously step to the edge of the embankment.")
     if "rusty" in items:
         print_sleep("It appears to quite faint, but there is something "
@@ -62,7 +63,7 @@ def lake(items):
     if "silver" in items:
         print_sleep("There is nothing more to do here.")
     print_sleep("You head back to the oak tree.")
-    decision(items)
+    decision(items, monster)
 
 
 def valid_inputstr(prompt, option1, option2):
@@ -90,46 +91,46 @@ def valid_inputstr(prompt, option1, option2):
 #             print_sleep("Sorry, I don't understand. Try again.")
 
 
-def decision(items):
+def decision(items, monster):
     print_sleep("Enter 1 to knock on the door of the house.")
     print_sleep("Enter 2 to make your way to the lake.")
     print_sleep("What would you like to do?")
     choice = valid_inputstr("(Please enter 1 or 2.)", "1", "2")
     if choice == "1":
-        church(items)
+        church(items, monster)
     if choice == "2":
-        lake(items)
+        lake(items, monster)
 
 
-def fight(items):
+def fight(items, monster):
     if "rusty" in items:
         print_sleep("You do your best...")
-        print_sleep(f"but your rusty sword is no match for a {monster}.")
+        print_deepsleep("but your rusty sword is no match for a ", monster, ".")
         print_sleep("You have been defeated!")
         play_again()
     elif "silver" in items:
-        print_sleep(f"As the {monster} comes back for another attack,")
+        print_deepsleep("As the ", monster, "comes back for another attack,")
         print_sleep("You unsheathe Aerondight, your new sword.")
-        print_sleep(f"The {monster} quickly swoops down for it's attack,")
+        print_deepsleep("The ", monster, "quickly swoops down for it's attack,")
         print_sleep("it has remarkable speed... but you are faster.")
         print_sleep(f"In a flash just as bright as the sun,")
         print_sleep("the mighty {monster} falls to the ground.")
         print_sleep("You victoriously stand over the felled beast unharmed.")
-        print_sleep(f"You have rid the nearby town of the {monster}.")
+        print_deepsleep("You have rid the nearby town of the ", monster, ".")
         play_again()
 
 
-def flight(items):
+def flight(items, monster):
     print_sleep("You quickly run back to the oak tree.")
     print_sleep("Luckily, you don't seem to have been pursued.")
-    decision(items)
+    decision(items, monster)
 
 
 def play_game():
+    monster = random.choice(["Griffin", "Dragon", "Wyvern", "Basilisk", "Harpy"])
     items = []
-    intro(items)
-    # options()
-    decision(items)
+    intro(items, monster)
+    decision(items, monster)
 
 
 def play_again():
