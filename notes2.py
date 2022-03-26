@@ -177,47 +177,48 @@
 # To see the results, we need to call the function and print what it returns:
 # print(silly_string(nouns, verbs, templates))
 
+import math
+# def string_input(prompt, options):
+#     while True:
+#         option = input(prompt).lower()
+#         if option in options:
+#             return option
+#         print(f'Option {option} is invalid. Try again!')
+#
+#
+# def numeric_input(prompt, minimum, maximum):
+#     while True:
+#         option = input(prompt).lower()
+#         if option.isnumeric():
+#             option = int(option)
+#             if minimum <= option <= maximum:
+#                 return option
+#             else:
+#                 print(f'Option must be >= {minimum} and <= {maximum}. Try again!')
+#         else:
+#             print(f'Option {option} must be numeric. Try again!')
+#
+#
+# def password_input():
+#     while True:
+#         password = input('Enter the password: ')
+#         if len(password) < 6:
+#             print('Must be >= 6')
+#         elif len(password) > 20:
+#             print('Must be <= 20')
+#         elif not any(character.isdigit() for character in password):
+#             print('Must have one or more numbers')
+#         elif not any(character.isupper() for character in password):
+#             print('Must have one or more uppercase characters')
+#         elif not any(character.islower() for character in password):
+#             print('Must have one or more lowercase characters')
+#         else:
+#             return password
+#
+#
+# my_string = string_input('Choose a, b, or c:', ['a', 'b', 'c'])
+#
+# my_number = numeric_input('Choose between 1 and 10:', 1, 10)
+#
+# my_password = password_input()
 
-def string_input(prompt, options):
-    while True:
-        option = input(prompt).lower()
-        if option in options:
-            return option
-        print(f'Option {option} is invalid. Try again!')
-
-
-def numeric_input(prompt, minimum, maximum):
-    while True:
-        option = input(prompt).lower()
-        if option.isnumeric():
-            option = int(option)
-            if minimum <= option <= maximum:
-                return option
-            else:
-                print(f'Option must be >= {minimum} and <= {maximum}. Try again!')
-        else:
-            print(f'Option {option} must be numeric. Try again!')
-
-
-def password_input():
-    while True:
-        password = input('Enter the password: ')
-        if len(password) < 6:
-            print('Must be >= 6')
-        elif len(password) > 20:
-            print('Must be <= 20')
-        elif not any(character.isdigit() for character in password):
-            print('Must have one or more numbers')
-        elif not any(character.isupper() for character in password):
-            print('Must have one or more uppercase characters')
-        elif not any(character.islower() for character in password):
-            print('Must have one or more lowercase characters')
-        else:
-            return password
-
-
-my_string = string_input('Choose a, b, or c:', ['a', 'b', 'c'])
-
-my_number = numeric_input('Choose between 1 and 10:', 1, 10)
-
-my_password = password_input()
