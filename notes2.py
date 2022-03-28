@@ -221,4 +221,39 @@ import math
 # my_number = numeric_input('Choose between 1 and 10:', 1, 10)
 #
 # my_password = password_input()
+import string
+# new_file = open("new_file.txt", "w") # Create and open a new file in write mode
+# new_file.write("New content!") # Write to the file
+# new_file.close() # Close the file
+#
+# new_file = open("new_file.txt", "r") # Open the file again, this time in read mode
+# contents = new_file.read() # Read the contents of the file
+# print(contents) # Print it out to check that it worked!
+#
+# with open("new_file.txt", "w") as new_file: # Create and open new file
+#     new_file.write("New content!") # Write to the file
+#
+# with open("new_file.txt", "r") as new_file # Open the file again, this time in read mode
+#     contents = new_file.read()
+#
+# print(contents)
 
+# with open("old_file.txt") as old_file:
+#     with open("new_file.txt", "w") as new_file:
+#         new_file.write(old_file.read())
+#
+# with open("new_file.txt") as new_file:
+#     print(new_file.read())
+
+# Print with for loop:
+# with open("new_file.txt", "w") as new_file:
+#     for num in range(31):
+#         if num % 2 == 0:
+#             new_file.write(str(num))
+#             new_file.write("\n")
+
+# Print for loop wit f-string
+# with open("new_file.txt", "w") as new_file:
+#     for num in range(31):
+#         if num % 2 == 0:
+#             new_file.write(str(f"{num}\n"))
