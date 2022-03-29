@@ -148,7 +148,7 @@
 #         "Let's go: the {{noun}} is {{verb}}.",
 #         'Colorless green {{noun}}s {{verb}} furiously.']
 #
-# import random
+import random
 #
 # def silly_string(nouns, verbs, templates):
 #     # Choose a random template.
@@ -257,3 +257,27 @@ import string
 #     for num in range(31):
 #         if num % 2 == 0:
 #             new_file.write(str(f"{num}\n"))
+
+dict
+
+# Looping over dictionaries example
+# str = 'it appears that the the appears the most in the sentence'
+# dict = {}
+# list = str.split(" ")
+# for word in list:
+#     if word in dict:
+#         dict[word] = dict[word] + 1
+#     else:
+#         dict[word] = 1
+# for key, value in dict.items():
+#     print(f"\'{key}\' appears {value} time(s) in the string")
+
+# Looping over Nested Structures
+# foods = [['apple', 'banana', 'orange'],['carrot', 'cucumber', 'tomato']]
+# for e in foods:
+#     print(e)
+# for e in foods[0]:
+#     print(e)
+# for e in foods:
+#   print(e[0])
+#
