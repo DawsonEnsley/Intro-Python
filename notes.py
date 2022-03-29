@@ -108,7 +108,9 @@
 #     print(n)
 #     n -= 1
 # print('Blastoff!')
+
 import time
+
 # items = []
 #
 # def print_sleep(print_pause):
@@ -200,7 +202,9 @@ import time
 #
 #
 # play_game()
+
 import string
+
 # rude_words = ["crap", "darn", "heck", "jerk", "idiot", "butt", "devil"]
 #
 #
@@ -265,3 +269,138 @@ import string
 #
 # if __name__ == '__main__':
 #     check_file("my_story.txt")
+
+import requests
+
+# try:
+#     r = requests.get("https://www.udacity.com")
+# except NameError:
+#     print("Did you forget to import the requests module?")
+#
+# try:
+#     print(r.text)
+# except NameError:
+#     print("There seems to be a NameError; r is not defined!")
+#
+# string = 'short'
+# try:
+#     for letter in range(6):
+#         print(string[letter])
+# except IndexError:
+#     print("Did you try to index past the end of the string?")
+#
+# print("Woohoo! You got them all!")
+#
+# try:
+#     r = requests.get("https://www.udacity.com")
+#     print(r)
+# except requests.exceptions.ConnectionError:
+#     print("Could not connect to server.")
+
+# weather = [
+#     {
+#         'date': 'today',
+#         'state': 'cloudy',
+#         'temp': 68.5
+#     },
+#     {
+#         'date': 'tomorrow',
+#         'state': 'sunny',
+#         'temp': 74.8
+#     }
+# ]
+#
+# for e in weather:
+#     print(e)
+#
+# for key in weather[0].keys():
+#     print(key)
+# print("Keys")
+# for value in weather[0].values():
+#     print(value)
+# print("Values")
+# for key, value in weather[0].items():
+#     print(key)
+#     print(value)
+# print("Both")
+
+# Simple Weather Report Example
+# weather = [
+#     {
+#         'date':'today',
+#         'state': 'cloudy',
+#         'temp': 68.5
+#     },
+#     {
+#         'date':'tomorrow',
+#         'state': 'sunny',
+#         'temp': 74.8
+#     }
+# ]
+
+# for forecast in weather:
+#     date = forecast['date']
+#     state = forecast['state']
+#     temp = forecast['temp']
+#     print(f"The weather for {date} will be {state} with a temperature of {temp} degrees.")
+#
+# import requests
+# r = requests.get('https://www.metaweather.com/api/location/2455920')
+# d = r.json()
+# for key in d:
+#     print(key)
+
+# d['consolidated_weather'][0]['max_temp']
+# d['consolidated_weather'][0]['max_temp'] * 9/5 + 32
+#
+# for forecast in d['consolidated_weather']:
+#     date = forecast['applicable_date']
+#     humidity = forecast['humidity']
+#     print(f"{date}\tHumidity: {humidity}")
+
+# import requests
+# Weather Application using Web APIs
+
+# API_ROOT = 'https://www.metaweather.com'
+# API_LOCATION = '/api/location/search/?query='
+# API_WEATHER = '/api/location/'  # + woeid
+#
+# def fetch_location(query):
+#     return requests.get(API_ROOT + API_LOCATION + query).json()
+#
+# def fetch_weather(woeid):
+#     return requests.get(API_ROOT + API_WEATHER + str(woeid)).json()
+#
+# def disambiguate_locations(locations):
+#     print("Ambiguous location! Did you mean:")
+#     for loc in locations:
+#         print(f"\t* {loc['title']}")
+#
+# def display_weather(weather):
+#     print(f"Weather for {weather['title']}:")
+#     for entry in weather['consolidated_weather']:
+#         date = entry['applicable_date']
+#         high = entry['max_temp']
+#         low = entry['min_temp']
+#         state = entry['weather_state_name']
+#         print(f"{date}\t{state}\thigh {high:2.1f}°C\tlow {low:2.1f}°C")
+#
+# def weather_dialog():
+#     try:
+#         where = ''
+#         while not where:
+#             where = input("Where in the world are you? ")
+#         locations = fetch_location(where)
+#         if len(locations) == 0:
+#             print("I don't know where that is.")
+#         elif len(locations) > 1:
+#             disambiguate_locations(locations)
+#         else:
+#             woeid = locations[0]['woeid']
+#             display_weather(fetch_weather(woeid))
+#     except requests.exceptions.ConnectionError:
+#         print("Couldn't connect to server! Is the network up?")
+#
+# if __name__ == '__main__':
+#     while True:
+#         weather_dialog()
